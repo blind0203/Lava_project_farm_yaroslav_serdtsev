@@ -9,13 +9,10 @@ using UnityEngine.AI;
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
 public class FieldManager : Singleton<FieldManager> {
-    public List<Cell> CellList { get; private set; }
+    [HideInInspector] public List<Cell> CellList { get; private set; }
     [HideInInspector] public Cell SelectedCell { get; private set; }
-
     [HideInInspector] public Vector2Int FieldSize => _cellCount;
-
     [SerializeField] private Vector2Int _cellCount;
-
     [SerializeField] private List<Vector3> _verts;
     [SerializeField] private List<int> _tris;
     [SerializeField, Range(0.0001f, 1f)] private float _noiseScale;
@@ -86,6 +83,7 @@ public class FieldManager : Singleton<FieldManager> {
     private void CreateDigTilesTexture() {
         _tileTexture = new Texture2D(_cellCount.x, _cellCount.y, TextureFormat.R8, false);
         _tileTexture.wrapMode = TextureWrapMode.Clamp;
+        _tileTexture.filterMode = FilterMode.Point;
         for (int x = 0; x < _cellCount.x; x++) {
             for (int y = 0; y < _cellCount.y; y++) {
                 _tileTexture.SetPixel(x, y, Color.clear);

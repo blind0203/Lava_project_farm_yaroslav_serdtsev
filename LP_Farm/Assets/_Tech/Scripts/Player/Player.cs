@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     private Vector2 _cameraPix;
 
     private void Start() {
+        Application.targetFrameRate = 300;
+
         _playerAgent.updateRotation = false;
         _fieldManager = FieldManager.Instance;
         _projector.material.SetFloat(OPACITY, 0f);

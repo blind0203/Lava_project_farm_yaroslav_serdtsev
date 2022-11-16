@@ -79,6 +79,6 @@ Material:
     - _ColorBottom: {r: 1, g: 0.8850563, b: 0.2688679, a: 1}
     - _ColorTop: {r: 0.46164292, g: 0.9622642, b: 0.12255252, a: 1}
     - _DiggedColor: {r: 0.6226415, g: 0.4668762, b: 0.13803844, a: 1}
-    - _FieldSize: {r: 6, g: 6, b: 0, a: 0}
+    - _FieldSize: {r: 4, g: 4, b: 0, a: 0}
     - _Tiling: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
