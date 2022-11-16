@@ -58,3 +58,9 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+LP_Farm/Library
+LP_Farm/Logs
+LP_Farm/obj
+LP_Farm/Temp
+LP_Farm/UserSettings
+LP_Farm/.vsconfig
